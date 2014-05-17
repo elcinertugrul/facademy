@@ -1,0 +1,10 @@
+c:\users\eertugrul\documents\visual studio 2010\Projects\BIS\BIS\bin\Debug\BIS.exe
+c:\users\eertugrul\documents\visual studio 2010\Projects\BIS\BIS\bin\Debug\BIS.pdb
+c:\users\eertugrul\documents\visual studio 2010\Projects\BIS\BIS\obj\x86\Debug\BIS.exe
+c:\users\eertugrul\documents\visual studio 2010\Projects\BIS\BIS\obj\x86\Debug\BIS.pdb
+C:\Users\EErtugrul\documents\visual studio 2010\Projects\BIS\BIS\obj\x86\Debug\BIS.csprojResolveAssemblyReference.cache
+E:\AEC2014-Elcin Ertugrul\Hackathon\HackathonProject\BIS\BIS\obj\x86\Debug\BIS.exe
+E:\AEC2014-Elcin Ertugrul\Hackathon\HackathonProject\BIS\BIS\obj\x86\Debug\BIS.pdb
+E:\AEC2014-Elcin Ertugrul\Hackathon\HackathonProject\BIS\BIS\bin\Debug\BIS.exe
+E:\AEC2014-Elcin Ertugrul\Hackathon\HackathonProject\BIS\BIS\bin\Debug\BIS.pdb
+E:\AEC2014-Elcin Ertugrul\Hackathon\HackathonProject\BIS\BIS\obj\x86\Debug\BIS.csprojResolveAssemblyReference.cache
