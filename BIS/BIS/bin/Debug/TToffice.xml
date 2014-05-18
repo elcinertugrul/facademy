@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TToffice</name>
+    </assembly>
+    <members>
+        <member name="T:TToffice.TT_Word">
+            <summary>
+                A class that interacts with Microsot Word
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Word.openInvisible(System.String)">
+            <summary>
+            Open invisible word document.
+            </summary>
+            <param name="filePath">The filepath of the doc to open</param>
+        </member>
+        <member name="M:TToffice.TT_Word.openInvisible">
+            <summary>
+            Open invisible instance of excel without opening a file
+            </summary>       
+        </member>
+        <member name="M:TToffice.TT_Word.openFile(System.String)">
+            <summary>
+            open a file with existing ApplicationClass (Be sure to call openInvisible() first)
+            </summary>
+            <param name="filePath">The filepath of the doc to open</param>
+        </member>
+        <member name="M:TToffice.TT_Word.closeFile">
+            <summary>
+            close opened file with existing ApplicationClass
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Word.readDoc(System.Collections.Generic.List{Microsoft.Office.Interop.Word.Range}@)">
+            <summary>
+            Read word doc as a list of Range Selection.FormattedText
+            </summary>
+            <param name="data">The read list</param>
+        </member>
+        <member name="M:TToffice.TT_Word.readDoc(System.String@)">
+            ***CURRENTLY NOT BEING USED***
+            <summary>
+            Read word doc as one string
+            </summary>
+            <param name="data">The read string</param>
+        </member>
+        <member name="M:TToffice.TT_Word.parseWordOpenXMLForIndent(System.String)">
+            ***NEEDS MORE WORK - CURRENTLY NOT BEING USED***
+            <summary>
+            Parse WordOpenXML for indent spacing        
+            </summary>
+            <param name="xmlString">The xml string</param>
+        </member>
+        <member name="M:TToffice.TT_Word.close">
+            <summary>
+            Close instance of Microsoft Word
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.initNew">
+            <summary>
+            Initialize a connection to a new background instance of excel
+            OBSOLETE because of unclear name - use initNewInvisible() instead.
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.initNewInvisible">
+            <summary>
+            Initialize a connection to a new background instance of excel.
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.initNewVisible">
+            <summary>
+            Inititalize a connection to a new visible instance of excel.
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.initRunning">
+            <summary>
+            initialize a connection to the active instance of excel
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.openNewVisible(System.String)">
+            <summary>
+            open a new visible instance of excel, and a specified file
+            </summary>
+            <param name="filePath">the full file path to open</param>
+        </member>
+        <member name="M:TToffice.TT_Excel.openNewVisible(System.String,System.Boolean)">
+            <summary>
+            open a new visible instance of excel, and a specified file
+            </summary>
+            <param name="filePath">the full file path to open</param>
+            <param name="DisplayAlerts">Display user prompts in excel?</param>
+        </member>
+        <member name="M:TToffice.TT_Excel.open(System.String)">
+            <summary>
+            open a file
+            </summary>
+            <param name="filePath">Full path to a valid microsoft excel file.</param>
+        </member>
+        <member name="M:TToffice.TT_Excel.open(System.String,System.Boolean)">
+            <summary>
+            open a file
+            </summary>
+            <param name="filePath">Full path to a valid microsoft excel file.</param>
+            <param name="DisplayAlerts">Display user prompts in excel?</param>
+        </member>
+        <member name="M:TToffice.TT_Excel.openInvisible(System.String)">
+            <summary>
+            open a invisible file
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:TToffice.TT_Excel.clearWorksheetData">
+            <summary>
+            clear all of the data in the active worksheet
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.clearWorksheetData(System.Int32)">
+            <summary>
+            Clear all of the data in the specified worksheet.
+            </summary>
+            <param name="worksheet">The 1 based index of the worksheet to clear</param>
+        </member>
+        <member name="M:TToffice.TT_Excel.clearWorksheetData(System.String)">
+            <summary>
+            Clear all of the data in the specified worksheet.
+            </summary>
+            <param name="worksheet">The case sensitive name of the worksheet to clear.</param>
+        </member>
+        <member name="M:TToffice.TT_Excel.readSheet(System.String,System.String[0:,0:]@,System.String)">
+            <summary>
+            Read a sheet of data from Excel.
+            </summary>
+            <param name="worksheet">Name of the worksheet to read.</param>
+            <param name="data">A 2d array of objects to populate.</param>
+            <param name="EmptyCellString">THe string that will be written for empty cells - "" or "null" for example.</param>
+        </member>
+        <member name="M:TToffice.TT_Excel.conditionalFormatRange(System.String,System.Int32,System.Int32,System.Object[0:,0:],System.Collections.Generic.List{System.Int32[]})">
+            <summary>
+            Applies conditional formatting to a range of data in excel. Should be called with the same inputs as WriteRange(), and
+            directly after data has been written into Excel.
+            </summary>
+            <param name="worksheet">The Name of the worksheet to write in to.</param>
+            <param name="startColumn">The 1 based index of the coloumn to start writing data in to.</param>
+            <param name="startRow">The 1 based index of the row to start writing data in to.</param>
+            <param name="data">A 2d array of object values. These aren't writtne with this function, it just uses them to calculate
+            the size of the range to apply formatting to.</param>
+            <param name="RGB_Colors">A list of RGB values, formatted as an array of 3 int values - R,G,B. </param>
+        </member>
+        <member name="M:TToffice.TT_Excel.conditionalFormatRange(System.Int32,System.Int32,System.Int32,System.Object[0:,0:],System.Collections.Generic.List{System.Int32[]})">
+            <summary>
+            Applies conditional formatting to a range of data in excel. Should be called with the same inputs as WriteRange(), and
+            directly after data has been written into Excel.
+            </summary>
+            <param name="worksheet">The 1 based index of the worksheet to write in to.</param>
+            <param name="startColumn">The 1 based index of the coloumn to start writing data in to.</param>
+            <param name="startRow">The 1 based index of the row to start writing data in to.</param>
+            <param name="data">A 2d array of object values. These aren't writtne with this function, it just uses them to calculate
+            the size of the range to apply formatting to.</param>
+            <param name="RGB_Colors">A list of RGB values, formatted as an array of 3 int values - R,G,B. </param>
+        </member>
+        <member name="M:TToffice.TT_Excel.closeWorkbook">
+            <summary>
+            Close the active workbook
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.release">
+            <summary> release the active COM objects - should get rid of the hanging processes when grabbing an active instance of excel
+            Call this method at the end of your program to release all COM objects.
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.releaseBooksAndSheets">
+            <summary> release the active COM objects - should get rid of the hanging processes when grabbing an active instance of excel
+            Call this method at the end of your program to release all COM objects.
+            </summary>
+        </member>
+        <member name="M:TToffice.TT_Excel.IsEditMode">
+            <summary>
+            Checks to see whehter or not the currnet workbook is in edit mode - if a user is editing a cell
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TToffice.TT_Excel.WorksheetNames">
+            <summary>
+            Returns a list of the names of each worksheet in the active excel document.
+            </summary>
+        </member>
+        <member name="P:TToffice.TT_Excel.ActiveWorkookName">
+            <summary>
+            Returns the full file path of the currently open document.
+            </summary>
+        </member>
+        <member name="P:TToffice.TT_Excel.ActiveWorksheet">
+            <summary>
+            Returns the active worksheet object
+            </summary>
+        </member>
+    </members>
+</doc>
