@@ -19,3 +19,12 @@ C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\bin\Debug\TToffice.xml
 C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\bin\Debug\Microsoft.Office.Interop.Word.xml
 C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\bin\Debug\BIS.exe.config
 C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\obj\x86\Debug\BIS.csprojResolveAssemblyReference.cache
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\bin\Debug\BIS.exe.config
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\obj\x86\Debug\BIS.exe
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\obj\x86\Debug\BIS.pdb
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\bin\Debug\BIS.exe
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\bin\Debug\BIS.pdb
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\bin\Debug\TToffice.dll
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\bin\Debug\TToffice.pdb
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\bin\Debug\TToffice.xml
+C:\Users\EErtugrul\Documents\GitHub\facademy\BIS\BIS\obj\x86\Debug\BIS.csprojResolveAssemblyReference.cache
