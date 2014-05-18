@@ -17,7 +17,7 @@ namespace BIS
             List<string> bins = new List<string>();
 
             TT_Excel xl = new TT_Excel();
-            xl.openInvisible(@"C:\Users\ELCIN\Documents\GitHub\facademy\ZipCode10010_BINs.xlsx");
+            xl.openInvisible(@"C:\Users\ELCIN\Documents\GitHub\facademy\ZipCode10002_BINs.xlsx");
             string[] xldata;
             xl.readColumn(1, 1, out xldata);
 
@@ -131,8 +131,8 @@ namespace BIS
             
             var Json = new JavaScriptSerializer().Serialize(scrapeddata.ToArray());
 
-            File.WriteAllText(@"C:\Users\ELCIN\Desktop\JSONSrapperdata10010.txt", Json);
-            File.WriteAllText(@"C:\Users\ELCIN\Desktop\JSONSrapperdata10010.json", Json);
+            File.WriteAllText(@"C:\Users\ELCIN\Desktop\JSONSrapperdata10002.txt", Json);
+            File.WriteAllText(@"C:\Users\ELCIN\Desktop\JSONSrapperdata10002.json", Json);
 
             
         }

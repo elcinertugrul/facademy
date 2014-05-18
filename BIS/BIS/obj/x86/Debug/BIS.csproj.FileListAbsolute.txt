@@ -18,3 +18,4 @@ C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\bin\Debug\TToffice.pdb
 C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\bin\Debug\TToffice.xml
 C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\bin\Debug\Microsoft.Office.Interop.Word.xml
 C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\bin\Debug\BIS.exe.config
+C:\Users\ELCIN\Documents\GitHub\facademy\BIS\BIS\obj\x86\Debug\BIS.csprojResolveAssemblyReference.cache
