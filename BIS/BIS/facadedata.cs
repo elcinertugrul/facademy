@@ -8,13 +8,14 @@ namespace BIS
     public class facadedata
     {
         public string BIN;
-        public string NumHous;
-        public string StrtName;
+        public string Num;
+        public string Strt;
         public string Boro;
         public string Zip;
-        public string NumStories;
-        public string Cycle;
-        public string CurrentStatus;
+        public string NumStory;
+        public List<cycle> Cycles = new List<cycle>();
+        //public string Cycle;
+        //public string CurrentStatus;
 
         public facadedata() { }
     }
