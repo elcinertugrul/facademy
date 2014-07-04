@@ -17,8 +17,8 @@ namespace BIS
             List<string> bins = new List<string>();
 
             TT_Excel xl = new TT_Excel();
-            //xl.openInvisible(@"C:\Users\EErtugrul\Documents\GitHub\facademy\ZipCode10280_BINs.xlsx");
-            xl.openInvisible(@"C:\Users\ELCIN\Documents\GitHub\facademy\ZipCode10010_BINs.xlsx");
+            xl.openInvisible(@"C:\Users\EErtugrul\Documents\GitHub\facademy\ZipCode10038_BINs.xlsx");
+            //xl.openInvisible(@"C:\Users\ELCIN\Documents\GitHub\facademy\ZipCode10010_BINs.xlsx");
             string[] xldata;
             xl.readColumn(1, 1, out xldata);
 
@@ -74,7 +74,7 @@ namespace BIS
 
                         for (int i = 1; i < wordscycles.ToList().Count; i++)
                         {
-                            cycle acycle = new cycle();
+                            
                             //string[] splitthree = { "}\n","[1:FControlNumber]{", "[5:FCurrentStatus]{", "[8:FInitFileDate]{", "[9:FaIsn]{" };
                             string[] splitfour = { "}\n", "[1:FControlNumber]{", "[2:FHouseNumber]{", "[3:FStreetName]{", "[5:FCurrentStatus]{", "[6:FBin]{", "[7:FNumStories]{","[8:FInitFileDate]{", "[9:FaIsn]{" };
 
@@ -82,6 +82,7 @@ namespace BIS
 
                             if (wordsinfo[11] == bin)
                             {
+                                cycle acycle = new cycle();
                                 acycle.FCycle = wordsinfo[0];
                                 acycle.FCtrlNum = wordsinfo[2];
                                 bldgdata.Num = wordsinfo[4];
@@ -91,9 +92,9 @@ namespace BIS
                                 bldgdata.NumStory = wordsinfo[13];
                                 acycle.FInitDate = wordsinfo[15];
                                 acycle.FaISN = wordsinfo[17];
+                                bldgdata.Cycles.Add(acycle);
                             }
 
-                            bldgdata.Cycles.Add(acycle);
                         }
 
                         //populate zipcode and borough
@@ -103,7 +104,10 @@ namespace BIS
                         bldgdata.Boro = wordsthree[1];
                         bldgdata.Zip = wordsthree[3];
 
-                        scrapeddata.Add(bldgdata);
+                        if (bldgdata.Cycles.Count > 0)
+                        {
+                            scrapeddata.Add(bldgdata);
+                        }
                     } 
                 }
             }
@@ -116,11 +120,11 @@ namespace BIS
             
             var Json = new JavaScriptSerializer().Serialize(scrapeddata.ToArray());
 
-            //File.WriteAllText(@"C:\Users\EErtugrul\Documents\GitHub\facademy\JSONSrapperdata10280.txt", Json);
-            //File.WriteAllText(@"C:\Users\EErtugrul\Documents\GitHub\facademy\JSONSrapperdata10280.json", Json);
+            File.WriteAllText(@"C:\Users\EErtugrul\Documents\GitHub\facademy\JSONSrapperdata10038_R.txt", Json);
+            File.WriteAllText(@"C:\Users\EErtugrul\Documents\GitHub\facademy\JSONSrapperdata10038_R.json", Json);
 
-            File.WriteAllText(@"C:\Users\ELCIN\Documents\GitHub\facademy\JSONSrapperdata10010TEST_R.txt", Json);
-            File.WriteAllText(@"C:\Users\ELCIN\Documents\GitHub\facademy\JSONSrapperdata10010TEST_R.json", Json);
+            //File.WriteAllText(@"C:\Users\ELCIN\Documents\GitHub\facademy\JSONSrapperdata10010TEST.txt", Json);
+            //File.WriteAllText(@"C:\Users\ELCIN\Documents\GitHub\facademy\JSONSrapperdata10010TEST.json", Json);
    
         }
     }
